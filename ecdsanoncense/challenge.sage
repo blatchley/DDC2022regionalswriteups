@@ -50,7 +50,7 @@ def sign_message(sk, nonce_key):
     # Asking for flag is not allowed!
     if b'Flag Please' in msg:
         print(f"I'm not signing {msg}, go away no flag for you!")
-        # exit()
+        exit()
     
     # sign message
     r,s = sign(msg, nonce_key, sk)
